@@ -8,7 +8,7 @@ properties:
         description: Verify minimum OS version
         allowPrerelease: true
       settings:
-        MinVersion: '10.0.19045' # Example: Requires Windows 10 21H1 or later
+        MinVersion: '10.0.19045'
   resources:
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: google-chrome
@@ -39,9 +39,44 @@ properties:
         Id: Microsoft.VisualStudioCode
         Source: winget
     - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: WSL
+      directives:
+        description: Install Windows Subsystem for Linux
+      settings:
+        Id: Microsoft.WSL
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: spotify
       directives:
         description: Install Spotify
       settings:
         Id: Spotify.Spotify
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: nvm
+      directives:
+        description: Install Node Version Manager
+      settings:
+        Id: CoreyButler.NVMforWindows
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: docker
+      directives:
+        description: Install Docker Desktop
+      settings:
+        Id: Docker.DockerDesktop
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: terminal
+      directives:
+        description: Install Windows Terminal
+      settings:
+        Id: Microsoft.WindowsTerminal
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ubuntu
+      directives:
+        description: Install Ubuntu
+      settings:
+        Id: Canonical.Ubuntu.2204
         Source: winget
