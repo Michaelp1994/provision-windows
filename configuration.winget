@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  configurationVersion: 0.2.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum OS version
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.19045' # Example: Requires Windows 10 21H1 or later
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: google-chrome
+      directives:
+        description: Install Google Chrome
+      settings:
+        Id: Google.Chrome
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: git
+      directives:
+        description: Install Git
+      settings:
+        Id: Git.Git
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: lens
+      directives:
+        description: Install Lens
+      settings:
+        Id: Mirantis.Lens
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: vscode
+      directives:
+        description: Install Visual Studio Code
+      settings:
+        Id: Microsoft.VisualStudioCode
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: spotify
+      directives:
+        description: Install Spotify
+      settings:
+        Id: Spotify.Spotify
+        Source: winget
