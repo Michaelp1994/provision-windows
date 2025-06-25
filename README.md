@@ -20,5 +20,5 @@ git config --global user.name "Michael Poulgrian"
 ```
  Set Taskbar: Move Left, Remove Search and widgets
  Set Start Menu: Remove recommendations, recently added apps,
-
+    Pin the following: google chrome, vs-code, file explorer, spotify, calculator, paint, snipping tool, docker, terminal
  ```

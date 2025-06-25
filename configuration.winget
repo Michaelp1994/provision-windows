@@ -80,3 +80,10 @@ properties:
       settings:
         Id: Canonical.Ubuntu.2204
         Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: github
+      directives:
+        description: Install Github CLI
+      settings:
+        Id: Github.cli
+        Source: winget
