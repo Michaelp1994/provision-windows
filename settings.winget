@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  configurationVersion: 0.2.0
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify minimum OS version
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.19045'
+  resources:
+    - resource: Registry
+      directives:
+        description: Disable Windows 11 Taskbar Widgets
+      settings:
+        Key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+        ValueName: TaskbarDa
+        ValueType: DWord
+        ValueData: 0
+        Force: 1
+    - resource: Registry
+      directives:
+        description: Align taskbar to the left
+      settings:
+        Key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+        ValueName: TaskbarAlignment
+        ValueType: DWord
+        ValueData: 0 
+        Force: 1
+    - resource: Registry
+      directives:
+        description: Hide Windows 11 Search Bar
+      settings:
+        Key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search
+        ValueName: SearchboxTaskbarMode
+        ValueType: DWord
+        ValueData: 0 
+        Force: 1
+    - resource: Registry
+      directives:
+        description: Disable Start Menu Recommendations
+      settings:
+        Key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+        ValueName: ShowRecommendations
+        ValueType: DWord
+        ValueData: 0  # 0 = Hide recommendations, 1 = Show recommendations
+        Force: 1
