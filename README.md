@@ -27,4 +27,5 @@ git config --global user.name "Michael Poulgrian"
  Set Start Menu: Remove recommendations, recently added apps,
     Remove all pins and pin the following: google chrome, vs-code, file explorer, spotify, calculator, paint, snipping tool, docker, terminal
 Set Default apps: google chrome, terminal, vscode
+Folder options: Dont Hide extensions for known file types.
  ``
