@@ -28,4 +28,8 @@ git config --global user.name "Michael Poulgrian"
     Remove all pins and pin the following: google chrome, vs-code, file explorer, spotify, calculator, paint, snipping tool, docker, terminal
 Set Default apps: google chrome, terminal, vscode
 Folder options: Dont Hide extensions for known file types.
+ ```
+# 5. Uninstall apps
+```
+Onedrive, Copilot
  ``
