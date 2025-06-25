@@ -87,3 +87,17 @@ properties:
       settings:
         Id: Github.cli
         Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: terraform
+      directives:
+        description: Install Terraform
+      settings:
+        Id: Hashicorp.Terraform
+        Source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: kubectl
+      directives:
+        description: Install Kubectl
+      settings:
+        Id: Kubernetes.kubectl
+        Source: winget
